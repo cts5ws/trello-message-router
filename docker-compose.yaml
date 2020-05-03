@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  messagelistener:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+    - ./config:/home/node/app/config
+    env_file:
+    - ./config/config.env
