@@ -12,7 +12,7 @@ logger.setLevel(logging.DEBUG)
 verify_token = "04202020_quarantine_schwing"
 
 
-@app.route('/router/webhook', methods=['GET', 'POST'])
+@app.route('/router/ebhook', methods=['GET', 'POST'])
 def favicon():
     if request.method == 'GET':
         mode = request.args.get('hub.mode')
@@ -32,5 +32,4 @@ def favicon():
 
 
 if __name__ == '__main__':
-    #serve(app, host="0.0.0.0", port=5000)
-    app.run(ssl_context='adhoc',host="0.0.0.0", port=5000)
+    serve(app, host="0.0.0.0", port=5000)
