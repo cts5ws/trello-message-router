@@ -12,7 +12,7 @@ logger.setLevel(logging.DEBUG)
 verify_token = "04202020_quarantine_schwing"
 
 
-@app.route('/router/ebhook', methods=['GET', 'POST'])
+@app.route('/router/webhook', methods=['GET', 'POST'])
 def favicon():
     if request.method == 'GET':
         mode = request.args.get('hub.mode')
