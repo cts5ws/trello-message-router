@@ -4,7 +4,7 @@ cd $(dirname $0)
 while [[ -n "$1" ]]; do
     case "$1" in
     -d|--detached)
-        echo "Running detatched"
+        echo "Running detached"
         DETACHED="-d"
         ;;
     *) echo "Option $1 not recognized" ;;

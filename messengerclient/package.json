@@ -1,0 +1,16 @@
+{
+  "name": "messengerclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "facebook-chat-api": "^1.8.0",
+    "get-urls": "^9.2.0"
+  }
+}

@@ -1,11 +1,12 @@
 version: '3'
 
 services:
-
-  webhook:
-    container_name: "messagerouter_webhook"
+  messengerclient:
+    container_name: "messagerouter_messengerclient"
     build:
-      context: ./webhook
+      context: ./messengerclient
       dockerfile: ./Dockerfile
-    ports:
-      - "5000:5000"
+    volumes:
+    - ./messengerclient/config:/home/node/app/config
+    env_file:
+    - ./messengerclient/config/config.env
