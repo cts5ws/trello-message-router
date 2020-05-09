@@ -1,12 +1,11 @@
 version: '3'
 
 services:
-  messengerclient:
-    container_name: "messagerouter_messengerclient"
+  messagelistener:
     build:
-      context: ./messengerclient
+      context: ./
       dockerfile: ./Dockerfile
     volumes:
-    - ./messengerclient/config:/home/node/app/config
+    - ./config:/home/node/app/config
     env_file:
-    - ./messengerclient/config/config.env
+    - ./config/config.env
