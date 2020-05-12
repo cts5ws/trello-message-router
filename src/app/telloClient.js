@@ -20,7 +20,7 @@ const getListIdForChat = (messageInfo) => {
         ? messageInfo.participants.join(',')
         : messageInfo.threadName;
 
-    console.log(`Posting message to ${listName}`);
+    console.log(`Posting message: ${messageInfo.body} to ${listName}`);
     return axios.get(getListsUrl)
         .then(lists => {
             for (const list of lists.data) {
