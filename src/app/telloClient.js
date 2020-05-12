@@ -8,7 +8,7 @@ const authParams = `key=${trelloApiKey}&token=${trelloApiToken}`;
 const getListsUrl = `https://api.trello.com/1/boards/${boardId}/lists?${authParams}`;
 
 const getAddListUrl = (listName) => {
-    return `https://api.trello.com/1/boards/${boardId}/lists?name=${listName}&${authParams}`;
+    return encodeURI(`https://api.trello.com/1/boards/${boardId}/lists?name=${listName}&${authParams}`);
 }
 
 const getAddCardUrl = (listId, name) => {
